@@ -1,0 +1,7 @@
+﻿@LockBase_DMS_Service_HostAddress = http://localhost:5225
+
+GET {{LockBase_DMS_Service_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
