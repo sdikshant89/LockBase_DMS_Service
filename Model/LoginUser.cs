@@ -1,34 +1,40 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Xml.Linq;
 
 namespace LockBase_DMS_Service.Model
 {
-	public class LoginUser
+    [Table("login_user")]
+    public class LoginUser
     {
-        public int Id {get; set;}
+        [Key]
+        [Column("pk_user_id")]
+        public int Id { get; set; }
 
-        public string Username {get; set;}
+        [Column("username")]
+        public string Username { get; set; }
 
+        [Column("email")]
+        public string Email { get; set; }
 
-        public string Email {get; set;}
+        [Column("password")]
+        public string Password { get; set; }
 
+        [Column("country_code")]
+        public string CountryCode { get; set; }
 
-        public string Password {get; set;}
+        [Column("ph_number")]
+        public string PhoneNumber { get; set; }
 
+        [Column("create_date")]
+        public DateTime CreateDate { get; set; }
 
-        public string Country_code {get; set;}
+        [Column("update_date")]
+        public DateTime? UpdateDate { get; set; }
 
-
-        public string Phone_number {get; set;}
-
-
-        public DateTime CreateDate {get; set;}
-
-
-        public DateTime UpdateDate {get; set;}
-
-
-        public bool IsDeleted {get; set;}
+        [Column("is_deleted")]
+        public bool IsDeleted { get; set; }
 
     }
 }
